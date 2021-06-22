@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210622 14:09:17.956" rpa="false">
+<suite id="s1" name="Example" source="C:\Users\406822\Documents\RobotFramework\example.robot">
+<test id="s1-t1" name="Initialize">
+<kw name="Login To Website" library="ppd-analyst">
+<arguments>
+<arg>${URL}</arg>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Login To Website:</arg>
+</arguments>
+<assign>
+<var>${tag}</var>
+</assign>
+<msg timestamp="20210622 14:09:18.267" level="INFO">${tag} = Login To Website:</msg>
+<status status="PASS" starttime="20210622 14:09:18.267" endtime="20210622 14:09:18.267"></status>
+</kw>
+<kw name="Open Browser Page" library="utils">
+<arguments>
+<arg>${URL}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Open Browser Page</arg>
+</arguments>
+<assign>
+<var>${tag}</var>
+</assign>
+<msg timestamp="20210622 14:09:18.268" level="INFO">${tag} = Open Browser Page</msg>
+<status status="PASS" starttime="20210622 14:09:18.268" endtime="20210622 14:09:18.268"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${URL}"=="${EMPTY}"</arg>
+<arg>Fail</arg>
+<arg>${tag}: URL required</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:18.268" endtime="20210622 14:09:18.268"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210622 14:09:18.268" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:54398'.</msg>
+<status status="PASS" starttime="20210622 14:09:18.268" endtime="20210622 14:09:21.860"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:21.860" endtime="20210622 14:09:21.860"></status>
+</kw>
+<kw name="Debug" library="utils">
+<arguments>
+<arg>${tag}: Done</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${message}"=="${EMPTY}"</arg>
+<arg>Fail</arg>
+<arg>Debug: Message required</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:21.861" endtime="20210622 14:09:21.861"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${DEBUG}"=="1"</arg>
+<arg>Log To Console</arg>
+<arg>${message}</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${message}</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:21.862" endtime="20210622 14:09:21.862"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:21.862" endtime="20210622 14:09:21.862"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:21.860" endtime="20210622 14:09:21.862"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:18.267" endtime="20210622 14:09:21.862"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210622 14:09:21.863" endtime="20210622 14:09:25.027"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//a[@id="robot-a-login"]</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:25.027" endtime="20210622 14:09:26.051"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>robot-a-login</arg>
+</arguments>
+<msg timestamp="20210622 14:09:26.051" level="INFO">Clicking link 'robot-a-login'.</msg>
+<status status="PASS" starttime="20210622 14:09:26.051" endtime="20210622 14:09:29.639"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//input[@id="Email"]</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:29.640" endtime="20210622 14:09:30.670"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Email</arg>
+<arg>${USERNAME}</arg>
+</arguments>
+<msg timestamp="20210622 14:09:30.671" level="INFO">Typing text 'zack.bouz@lacity.org' into text field 'Email'.</msg>
+<status status="PASS" starttime="20210622 14:09:30.670" endtime="20210622 14:09:33.792"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Password</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20210622 14:09:33.792" level="INFO">Typing text 'Welcome100*' into text field 'Password'.</msg>
+<status status="PASS" starttime="20210622 14:09:33.792" endtime="20210622 14:09:36.902"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>btnLogin</arg>
+</arguments>
+<msg timestamp="20210622 14:09:36.902" level="INFO">Clicking button 'btnLogin'.</msg>
+<status status="PASS" starttime="20210622 14:09:36.902" endtime="20210622 14:09:41.879"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:18.267" endtime="20210622 14:09:41.880"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:18.266" endtime="20210622 14:09:41.881" critical="yes"></status>
+</test>
+<test id="s1-t2" name="PPD 1003">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>PPD 0003</arg>
+</arguments>
+<assign>
+<var>${last_name}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.893" level="INFO">${last_name} = PPD 0003</msg>
+<status status="PASS" starttime="20210622 14:09:41.892" endtime="20210622 14:09:41.893"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${CD}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.894" level="INFO">${CD} = 12</msg>
+<status status="PASS" starttime="20210622 14:09:41.894" endtime="20210622 14:09:41.894"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Cantara Street</arg>
+</arguments>
+<assign>
+<var>${primary_street}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.895" level="INFO">${primary_street} = Cantara Street</msg>
+<status status="PASS" starttime="20210622 14:09:41.895" endtime="20210622 14:09:41.895"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Garden Grove Avenue</arg>
+</arguments>
+<assign>
+<var>${cross_street}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.897" level="INFO">${cross_street} = Garden Grove Avenue</msg>
+<status status="PASS" starttime="20210622 14:09:41.897" endtime="20210622 14:09:41.897"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Wynne Avenue</arg>
+</arguments>
+<assign>
+<var>${end_of_block}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.898" level="INFO">${end_of_block} = Wynne Avenue</msg>
+<status status="PASS" starttime="20210622 14:09:41.898" endtime="20210622 14:09:41.898"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>3/1/2016</arg>
+</arguments>
+<assign>
+<var>${date_established}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.899" level="INFO">${date_established} = 3/1/2016</msg>
+<status status="PASS" starttime="20210622 14:09:41.899" endtime="20210622 14:09:41.899"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>-</arg>
+</arguments>
+<assign>
+<var>${date_posted}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.900" level="INFO">${date_posted} = -</msg>
+<status status="PASS" starttime="20210622 14:09:41.900" endtime="20210622 14:09:41.900"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>-</arg>
+</arguments>
+<assign>
+<var>${last_action}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.901" level="INFO">${last_action} = -</msg>
+<status status="PASS" starttime="20210622 14:09:41.901" endtime="20210622 14:09:41.901"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>SM</arg>
+</arguments>
+<assign>
+<var>${data_entered_by}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.902" level="INFO">${data_entered_by} = SM</msg>
+<status status="PASS" starttime="20210622 14:09:41.902" endtime="20210622 14:09:41.902"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>81-5863</arg>
+</arguments>
+<assign>
+<var>${council_file_number}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.903" level="INFO">${council_file_number} = 81-5863</msg>
+<status status="PASS" starttime="20210622 14:09:41.903" endtime="20210622 14:09:41.903"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=,</arg>
+<arg>${primary_street}</arg>
+<arg>${cross_street}</arg>
+<arg>${end_of_block}</arg>
+</arguments>
+<assign>
+<var>${prop_blocks}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.904" level="INFO">${prop_blocks} = Cantara Street,Garden Grove Avenue,Wynne Avenue</msg>
+<status status="PASS" starttime="20210622 14:09:41.904" endtime="20210622 14:09:41.904"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Date Established=${date_established}</arg>
+</arguments>
+<assign>
+<var>${note_date_established}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.905" level="INFO">${note_date_established} = Date Established=3/1/2016</msg>
+<status status="PASS" starttime="20210622 14:09:41.905" endtime="20210622 14:09:41.905"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Date Posted=${date_posted}</arg>
+</arguments>
+<assign>
+<var>${note_date_posted}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.906" level="INFO">${note_date_posted} = Date Posted=-</msg>
+<status status="PASS" starttime="20210622 14:09:41.906" endtime="20210622 14:09:41.906"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Last Action=${last_action}</arg>
+</arguments>
+<assign>
+<var>${note_last_action}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.907" level="INFO">${note_last_action} = Last Action=-</msg>
+<status status="PASS" starttime="20210622 14:09:41.906" endtime="20210622 14:09:41.907"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Data Entered By=${data_entered_by}</arg>
+</arguments>
+<assign>
+<var>${note_data_entered_by}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.908" level="INFO">${note_data_entered_by} = Data Entered By=SM</msg>
+<status status="PASS" starttime="20210622 14:09:41.907" endtime="20210622 14:09:41.908"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Council File Number=${council_file_number}</arg>
+</arguments>
+<assign>
+<var>${note_council_file_number}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.908" level="INFO">${note_council_file_number} = Council File Number=81-5863</msg>
+<status status="PASS" starttime="20210622 14:09:41.908" endtime="20210622 14:09:41.908"></status>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=\n</arg>
+<arg>${note_date_established}</arg>
+<arg>${note_date_posted}</arg>
+<arg>${note_last_action}</arg>
+<arg>${note_data_entered_by}</arg>
+<arg>${note_council_file_number}</arg>
+</arguments>
+<assign>
+<var>${notes}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.909" level="INFO">${notes} = Date Established=3/1/2016
+Date Posted=-
+Last Action=-
+Data Entered By=SM
+Council File Number=81-5863</msg>
+<status status="PASS" starttime="20210622 14:09:41.909" endtime="20210622 14:09:41.909"></status>
+</kw>
+<kw name="Go To New Request Page" library="ppd-analyst">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Go To Request Page:</arg>
+</arguments>
+<assign>
+<var>${tag}</var>
+</assign>
+<msg timestamp="20210622 14:09:41.912" level="INFO">${tag} = Go To Request Page:</msg>
+<status status="PASS" starttime="20210622 14:09:41.911" endtime="20210622 14:09:41.912"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//a[@id="robot-a-ppd"]</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:41.912" endtime="20210622 14:09:42.939"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>robot-a-ppd</arg>
+</arguments>
+<msg timestamp="20210622 14:09:42.942" level="INFO">Clicking link 'robot-a-ppd'.</msg>
+<status status="PASS" starttime="20210622 14:09:42.941" endtime="20210622 14:09:46.120"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//input[@id="input-Checkbox"]</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:46.120" endtime="20210622 14:09:47.137"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>input-Checkbox</arg>
+</arguments>
+<msg timestamp="20210622 14:09:47.137" level="INFO">Selecting checkbox 'input-Checkbox'.</msg>
+<status status="PASS" starttime="20210622 14:09:47.137" endtime="20210622 14:09:51.227"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>robot-a-new-request</arg>
+</arguments>
+<msg timestamp="20210622 14:09:51.228" level="INFO">Clicking link 'robot-a-new-request'.</msg>
+<status status="PASS" starttime="20210622 14:09:51.228" endtime="20210622 14:09:55.964"></status>
+</kw>
+<status status="PASS" starttime="20210622 14:09:41.911" endtime="20210622 14:09:55.964"></status>
+</kw>
+<kw name="Create Request" library="ppd-analyst">
+<arguments>
+<arg>${first_name}</arg>
+<arg>${last_name}</arg>
+<arg>${phone}</arg>
+<arg>${email}</arg>
+<arg>${address}</arg>
+<arg>${city}</arg>
+<arg>${zip}</arg>
+<arg>${CD}</arg>
+<arg>${reason}</arg>
+<arg>${prop_blocks}</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Create Request:</arg>
+</arguments>
+<assign>
+<var>${tag}</var>
+</assign>
+<msg timestamp="20210622 14:09:55.966" level="INFO">${tag} = Create Request:</msg>
+<status status="PASS" starttime="20210622 14:09:55.966" endtime="20210622 14:09:55.966"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//input[@id="input-Council"]</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:09:55.966" endtime="20210622 14:09:56.993"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>Origin</arg>
+<arg>CO</arg>
+</arguments>
+<msg timestamp="20210622 14:09:56.993" level="INFO">Selecting 'CO' from radio button 'Origin'.</msg>
+<status status="PASS" starttime="20210622 14:09:56.993" endtime="20210622 14:10:00.080"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:10:00.080" endtime="20210622 14:10:00.081"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>FirstName</arg>
+<arg>${first_name}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:00.081" level="INFO">Typing text 'AUTO' into text field 'FirstName'.</msg>
+<status status="PASS" starttime="20210622 14:10:00.081" endtime="20210622 14:10:01.713"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>LastName</arg>
+<arg>${last_name}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:01.714" level="INFO">Typing text 'PPD 0003' into text field 'LastName'.</msg>
+<status status="PASS" starttime="20210622 14:10:01.713" endtime="20210622 14:10:03.341"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Phone</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:03.343" level="INFO">Typing text '123-456-7890' into text field 'Phone'.</msg>
+<status status="PASS" starttime="20210622 14:10:03.342" endtime="20210622 14:10:04.989"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Email</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:04.990" level="INFO">Typing text 'romeo.asuncion+robotframework@lacity.org' into text field 'Email'.</msg>
+<status status="PASS" starttime="20210622 14:10:04.989" endtime="20210622 14:10:06.767"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Address</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:06.768" level="INFO">Typing text '101 S Main St' into text field 'Address'.</msg>
+<status status="PASS" starttime="20210622 14:10:06.767" endtime="20210622 14:10:08.377"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>City</arg>
+<arg>${city}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:08.377" level="INFO">Typing text 'Los Angeles' into text field 'City'.</msg>
+<status status="PASS" starttime="20210622 14:10:08.377" endtime="20210622 14:10:10.010"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Zipcode</arg>
+<arg>${zip}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:10.010" level="INFO">Typing text '90012' into text field 'Zipcode'.</msg>
+<status status="PASS" starttime="20210622 14:10:10.010" endtime="20210622 14:10:11.635"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>Reason</arg>
+<arg>${reason}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:11.636" level="INFO">Typing text 'Backlog' into text field 'Reason'.</msg>
+<status status="PASS" starttime="20210622 14:10:11.635" endtime="20210622 14:10:13.254"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>PropBlocks</arg>
+<arg>${prop_blocks}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:13.254" level="INFO">Typing text 'Cantara Street,Garden Grove Avenue,Wynne Avenue' into text field 'PropBlocks'.</msg>
+<status status="PASS" starttime="20210622 14:10:13.254" endtime="20210622 14:10:14.908"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1.0</arg>
+</arguments>
+<status status="PASS" starttime="20210622 14:10:14.909" endtime="20210622 14:10:14.911"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>CD</arg>
+<arg>${CD}</arg>
+</arguments>
+<msg timestamp="20210622 14:10:14.912" level="INFO">Selecting options from selection list 'CD' by label 12.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" starttime="20210622 14:10:18.820" endtime="20210622 14:10:18.820"></status>
+</kw>
+<msg timestamp="20210622 14:10:18.820" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20210622 14:10:14.911" endtime="20210622 14:10:18.827"></status>
+</kw>
+<status status="FAIL" starttime="20210622 14:09:55.965" endtime="20210622 14:10:18.828"></status>
+</kw>
+<status status="FAIL" starttime="20210622 14:09:41.886" endtime="20210622 14:10:18.830" critical="yes">Execution terminated by signal</status>
+</test>
+<status status="FAIL" starttime="20210622 14:09:17.960" endtime="20210622 14:10:18.833"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Example">Example</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210622 14:10:18.820" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>
